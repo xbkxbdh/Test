@@ -32,7 +32,7 @@ def main():
         base_name = sanitize_filename(args.title)
     else:
         parsed = urlparse(args.url)
-        path = parsed.path.strip('/').replace('/', '_')
+        path = parsed
         if path:
             base_name = sanitize_filename(path)
         else:
